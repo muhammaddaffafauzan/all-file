@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas bank</title>
+    <script>
+        prompt("silahkan masukan pin")
+    </script>
+    </script>
+    <style>
+        
+         body{
+            border-collapse: collapse;
+            background-color: rgb(0, 0, 255);
+            text-decoration-color: white;
+            border: black;
+            color: white;
+            font-family: cursive;
+        }
+        
+    </style>
+    
+</head>
+<body>
+   <h2 align="center">Selamat Datang Di Atm Bank Krut</h2>
+   <p align="center">_______Pilih Transaksi Yang Anda Inginkan________</p>
+   <div id="article">
+    <br>
+    <details>
+        <summary>Setor Tunai</summary>
+        <select name="set" id="setor">
+            <option value="50000">50000</option>
+            <option value="100000">100000</option>
+            <option value="150000">150000</option>
+        </select>
+        <input type="button" value="setor" onclick="fsetor()">
+    </details>
+    <br>
+    <details>
+        <summary>Tarik Tunai</summary>
+        <select name="tar" id="tarik">
+            <option value="50000">50000</option>
+            <option value="100000">100000</option>
+            <option value="150000">150000</option>
+        </select>      
+        <input type="button" value="tarik" onclick="ftarik()">
+    </details>
+    <br>
+    <details>
+        <summary>Nabung</summary>
+        <select name="nab" id="nabung">
+            <option value="50000">50000</option>
+            <option value="100000">100000</option>
+            <option value="150000">150000</option>
+        </select>
+        <input type="button" value="nabung" onclick="fnabung()">
+    </details>
+    <br>
+    <br>
+    <a href="tugasbank.html"><li>Exit</li></a>
+</div>
+<div id="detail"></div>
+
+<script>
+    let login = false;
+
+    let pin = null;
+
+    let saldo = 100000;
+
+    while (pin == '' || pin == null){
+    pin = prompt('masukan pin');
+    }
+
+    function frefresh() {
+        document.getElementById('detail').innerHTML = 'pin :<br>' + pin +'<br><br>saldo : <br>'+ saldo;
+    }
+
+    function fsetor(){
+        saldo += parseInt(document.getElementById('setor').value);
+        frefresh();
+    }
+
+    function ftarik(){
+        if(saldo - parseInt(document.getElementById('tarik').value) < 50000){
+            alert('maaf saldo anda tidak cukup')
+        }
+        else{
+            saldo -= parseInt(document.getElementById('tarik').value);
+        }frefresh();
+    }
+    frefresh();
+
+    function fnabung(){
+        saldo += parseInt(document.getElementById('nabung').value);
+        frefresh();
+    }
+
+  
+</script>
+
+</body>
+
+</html>

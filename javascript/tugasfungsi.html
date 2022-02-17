@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function persegiP(panjang, lebar){
+            let hasilp = panjang * lebar;
+        document.writeln(`Jika Persegi panjang memiliki panjang ${panjang}cm dan lebar ${lebar}cm Maka luas nya adalah ${hasilp}cm`)
+        }
+        persegiP(20, 10);
+        document.writeln(`<br>`)
+        function segitigaS(s1, s2){
+            let hasils = 1/2 * s1 * s2;
+            document.writeln(`Jika segitiga siku-siku memiliki Alas${s1}cm tinggi ${s2}cm Maka luas nya adalah ${hasils}cm`)
+        }
+        segitigaS(13, 5)
+        document.writeln(`<br>`)
+        function lingkaran(jari){
+            let hasill = jari * jari * 3.14;
+        document.writeln(`Jika Lingkaran memiliki jari-jari ${jari}cm Maka luas nya adalah ${hasill}cm`)
+        }
+        lingkaran(5);
+    </script>
+</body>
+</html>

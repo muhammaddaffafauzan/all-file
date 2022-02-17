@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masukan pin - ATM BRI</title>
+</head>
+<style>
+    body{
+        border-collapse: collapse;
+        background-color: blue;
+        text-decoration-color: wheat;
+        border-color: black;
+        color: white;
+        font-family: monospace;
+    }
+    .container{
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 25px;
+    width: 300px;
+
+    background-color: rgba(255, 255, 255, 0);
+}
+.container h1{
+    text-align: left;
+    color: #fafafa;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.container label{
+    text-align: left;
+    color: #90caf9;
+}
+.container form input{
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: black;
+   
+    color: #fff;
+    font-size: 20px;
+}
+.container form button{
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    background-color:rgb(0, 0, 255);
+    font-size: 18px;
+    color: #fafafa
+}
+</style>
+<body>
+    <center><h1>ATM BANK BRI</H1></center>
+        <center><h1>=======================================================</H1></center>
+           <table>
+            <td><div class="container">
+                <h1>Masukan pin</h1>
+                <form>
+                     <label>Pin</label><br>
+                      <input type="password" name="number" id="number"><br>
+                      <button onclick="getaction()" id="submit">ENTER</button>  
+                      </form>
+              </div></td>
+              <div id="optiontrue" style="display: none;">
+                <h2 align="center">Selamat Datang Di ATM Bank BRI</h2>
+                <details>
+                    <summary>Kredit</summary>
+                    <center><font size="50">============Sedang Gangguan============</font></center>
+                </details>
+                <details>
+                    <summary>Tabungan BRI</summary>
+                    <h2 align="center">MENU UTAMA</h2>
+                    <h2 align="center">( PECAHAN RP.50.000)</h2>
+                    <h2 align="center">====================================================================================</h2>
+                <div id="article">
+                 <br>
+                 <table>
+                     <tr>
+                         <td>
+                 <details>
+                     <summary>Setor Tunai</summary>
+                     <p>Jika Anda Ingin Setor Tunai Minimal Rp.50.000</p>
+                     <select name="set" id="setor" style="background-color: transparent; color: white;">
+                         <option value="50000" style="background-color: blue;">Rp.50000</option>
+                         <option value="100000" style="background-color: blue;">Rp.100000</option>
+                         <option value="150000" style="background-color: blue;">Rp.150000</option>
+                         <option value="200000" style="background-color: blue;">Rp.200000</option>
+                         <option value="300000" style="background-color: blue;">Rp.300000</option>
+                         <option value="300000" style="background-color: blue;">Rp.400000</option>
+                         <option value="500000" style="background-color: blue;">Rp.500000</option>
+                     </select>
+                     <input type="button" value="setor" onclick="setor()" style="background-color: transparent; color: white;">
+                 </details>
+                 <br>
+                 <details>
+                     <summary>Tarik Tunai</summary>
+                     <p>Jika Anda Ingin Tarik Tunai Minimal Rp.50.000</p>
+                     <select name="tar" id="tarik" style="background-color: transparent; color: white;">
+                         <option value="50000" style="background-color: blue;">Rp.50000</option>
+                         <option value="100000" style="background-color: blue;">Rp.100000</option>
+                         <option value="150000" style="background-color: blue;">Rp.150000</option>
+                         <option value="200000" style="background-color: blue;">Rp.200000</option>
+                         <option value="300000" style="background-color: blue;">Rp.300000</option>
+                         <option value="300000" style="background-color: blue;">Rp.400000</option>
+                         <option value="500000" style="background-color: blue;">Rp.500000</option>
+                     </select>      
+                     <input type="button" value="tarik" onclick="tarik()" style="background-color: transparent; color: white;">
+                 </details>
+                         </td>
+                         <td><div id="detail" style="margin-left: 0%;"></div></td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <details>
+                                 <summary>Nabung</summary>
+                                 <input type="number" name="nab" id="nabung" value="0" min="0" style="background-color: transparent; color: white;">
+                                 <input type="button" value="nabung" onclick="nabung()" style="background-color: transparent; color: white;">
+                             </details>
+                         </td>
+                     </tr>
+                 </table>
+             </div>
+             </details>
+             <br><br><br><br><br><br>
+             <a href="index.html" style="color: white;"><font size="40">EXIT</font></a>
+              </div>
+    <script src="bank.js"></script>
+</body>
+</html>

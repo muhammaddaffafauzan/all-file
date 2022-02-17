@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        padding: 7px;
+        width: 20%;
+    }
+    th{
+        background-color: dodgerblue;
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th>No.</th>
+            <th>Nama Bulan</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td><pre id="j" style="font-family: Calibri;"></pre></td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>
+                <pre id="f" style="font-family: Calibri;"></pre>
+            </td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>
+                <pre id="m" style="font-family: Calibri;"></pre>
+            </td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>
+                <pre id="a" style="font-family: Calibri;"></pre>
+            </td>
+        </tr>
+    </table>
+    <script>
+        let bulan = ['januari','februari','maret','april'];{
+             document.getElementById('j').innerHTML += (bulan[0]);
+              document.getElementById('f').innerHTML += (bulan[1]);
+               document.getElementById('m').innerHTML += (bulan[2]);
+                document.getElementById('a').innerHTML += (bulan[3]);
+        }
+    </script>
+</body>
+</html>

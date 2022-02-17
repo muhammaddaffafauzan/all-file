@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List sweater</title>
+    <link rel="icon" href="titleSC-removebg-preview.png">
+    <style>
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+        
+        li {
+        float: left;
+        }
+        
+        li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+        
+        li a:hover, .dropdown:hover .dropbtn {
+        background-color: rgb(255, 187, 0);
+        }
+        
+        li.dropdown {
+        display: inline-block;
+        }
+        
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+        
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+</style>
+<style>
+    table { 
+        border-collapse: collapse;
+        align-items: center;
+    }
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 10px;
+    }
+    th {
+        background-color: rgb(255, 187, 0);
+        color: white;
+    }tr:hover {background-color: #f5f5f5;}
+</style>
+<style>
+    #footer{
+width: 100%;
+font-size:15px;
+color: #fff;
+text-align: center;
+background: #222222;
+clear: both;
+padding: 2px;
+}
+    #t{
+width: 100%;
+background-color: #444444;
+clear: both;
+}
+#tk{
+width:98%;
+padding: 1%;
+}
+#k{
+float: left;
+width: 20%;
+padding:1%;
+color: #494848; 
+}
+#j{
+float: right;
+width: 30%;
+padding: 1%;
+background: #cccccc;
+}
+.t{
+padding: 5px;
+}
+#aku{
+float: left;
+width: 49%;
+margin: 2% 1% 0 0;
+}
+</style>
+</head>
+<body>
+    <img height="70px" src="Screamous.png">
+<div id="header">
+    <ul>    
+        <li><a href="ULANGAN MINGGUAN 2 No.1.HTML">Beranda</a></li>
+        <li><a href="#">Tentang</a></li>
+        <li><a href="#">kontak</a></li>
+        <li class="dropdown">
+        <a href="#" class="dropbtn">List Produk</a>
+        <div class="dropdown-content">
+        <a href="tabelkaos.html">Kaos</a>
+        </li>
+        </ul>
+        </div>
+        <div id="body">
+        <h1 align="center">list Harga Sweater</h1>
+            <table align="center" border="1" cellpadding="10">
+                <tr>
+                    <th bgcolor="cyan" rowspan="1">Kode</th>
+                    <th bgcolor="cyan" colspan="1">Model Sweater</th>
+                    <th bgcolor="cyan" colspan="1">Harga</th>
+                </tr>
+                <tr>
+                    <td>201</td>
+                    <td>Anarchy in Uk</td>
+                    <td>Rp.475.000</td>
+                </tr>
+                <tr>
+                    <td>202</td>
+                    <td>ARC Hoodie</td>
+                    <td>Rp.180.000</td>
+                </tr>
+                <tr>
+                    <td>203</td>
+                    <td>ARC Hoodie R1</td>
+                    <td>Rp.190.000</td>
+                </tr>
+                <tr>
+                    <td>204</td>
+                    <td>Atletic</td>
+                    <td>Rp.190.000</td>
+                </tr>
+                <tr>
+                    <td>205</td>
+                    <td>Atletic Flat</td>
+                    <td>Rp.160.000</td>
+                </tr>
+                </table>
+                <div id="t">
+                    <div id="tk">
+                     <div id="k">
+                      <h4>ALAMAT TOKO</h4>
+                      <P>-Jln.Sultan agung no.4
+                         -Jln.bahureksa No.34 
+                      </P>
+                      <h4>INFO PROMO DI TOKO KAMI</h4>
+                      <p>
+                          di bulan desember nanti tepat nya natal ada promo diskon up to 70%
+                      </p>
+                     </div>
+            </div>
+        <div id="j">
+            <h4>komentar</h4>
+            <textarea cols="40%" rows="10%">
+            </textarea><br>
+            <p>beri komentar melalui :</p>
+            <select name="akun">
+             <option value="volvo">GMAIL</option>
+             <option value="volvo">FACEBOOK</option>
+             <option value="volvo">YAHOO</option>
+            </select><BR>
+            <div id="read">
+             <input class="t" type="button" value="publikasikan">
+             <input class="t" type="button" value="batal">
+            </div>
+           </div>
+          </div>
+          <div id="footer">
+           <p>Copyright.screamous Bandung</p>
+           </div>
+         </div>            
+</body>
+</html>

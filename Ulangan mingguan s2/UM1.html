@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        padding: 7px;
+       
+    }
+    html{
+        background-color: rgb(179, 179, 179);
+    }
+</style>
+<body>
+    <br><br>
+    <br><br><br><br><br>
+    <br><br><br>
+    <form name="f">
+        
+<table align="center">
+    <tr>
+        <td>
+            Masukan bintang 
+        </td>
+        <td>
+            <input type="number" style="border-radius: 10px;" id="num" name="num" value="0" min="0">
+        </td>
+    </tr> 
+    <tr>
+        <td>
+        <label>Pilih bentuk segitiga</label>
+        </td>
+        <td>
+            <label><input type="radio" name="r" id="r1">siku-siku</label><br>
+            <label><input type="radio" name="r" id="r2">sempurna</label><br>
+            <label><input type="radio" name="r" id="r3">siku terbalik</label><br>
+            <label><input type="radio" name="r" id="r4">sempurna terbalik</label>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="button" style="border-radius: 10px;" value="    Hasil    " onclick="hasil()">
+        </td>
+        <tr>
+            <td colspan="2">
+                <pre  id="t" style="font-family: Calibri;"></pre>
+            </td>
+        </tr>
+</table>
+</form>
+
+<script>
+    function hasil() {
+    let bintang = parseInt(f.num.value);
+    document.getElementById("t").innerHTML = ''
+
+    if (document.getElementById('r1').checked) {
+        for (let a = 1; a <= bintang; a++) {
+            for (let b = 1; b <= a; b++){
+            document.getElementById('t').innerHTML += "*";
+        }
+       
+       document.getElementById("t").innerHTML += "<br>" 
+      }
+    }
+    else if ( document.getElementById('r2').checked) {
+        for (let a = 1; a <= bintang; a++){
+            for (let a1 = 1; a1 <= bintang-a; a1++){
+                document.getElementById('t').innerHTML += ' ';
+            }
+            for (let b = 1; b <= a; b++){
+            document.getElementById('t').innerHTML += "*";
+            }
+            document.getElementById("t").innerHTML += "<br>";
+        }
+    }
+    else if ( document.getElementById('r3').checked){
+        for (let a = 1; a <= bintang; a++) {
+            for (let b = 0; b <= bintang-a; b++){
+            document.getElementById('t').innerHTML += "*";
+        }
+       
+       document.getElementById("t").innerHTML += "<br>" 
+      }
+    }
+    else if ( document.getElementById('r4').checked) {
+        for (let a = 1; a <= bintang; a++){
+            for (let a1 = 1; a1 <= bintang-a; a1++){
+                document.getElementById('t').innerHTML += "*";
+            }
+            document.getElementById("t").innerHTML += "<br>";
+            for (let b = 1; b <= a; b++){
+                document.getElementById('t').innerHTML += ' ';
+            }
+        }
+    }
+    else{
+        alert("Pilih dulu woyy")
+    }
+}
+
+</script>
+
+</body>
+</html>

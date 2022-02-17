@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Bank</title>
+    <style>
+        body{
+              border-collapse: collapse;
+              background-color: rgb(0, 0, 255);
+              text-decoration-color: white;
+              border: black;
+              color: white;
+              font-family: monospace;
+              font-size: 20px;}
+         td{
+             background-color: rgb(134, 134, 134);
+             border-radius: 10%;
+         }
+details{
+    height: 120px;
+    
+}
+  </style>
+  </head>
+  <body>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+    <div id="options11">
+    <h2 align="center">Selamat Datang Di ATM Bank BRI</h2>
+    <h2 align="center">===================================================================</h2>
+    <table cellpadding="10"><tr><th>
+    <div style="margin-left: 100px;">
+        <h5>silahkan Masukan pin :</h5>
+        <input type="number" name="number" id="number" style="background-color: black; color: white;"/>
+        <input type="button" class="btn btn-secondary" name="submit" id="submit" onclick="getaction()" value="Masuk"/>
+    </div>   
+    
+</th>
+</div>
+<th><button type="button" class="btn btn-secondary" style="background-color: transparent; border-radius: 10px; margin-left: 90%; margin-top: 50%; border: transparent;" onclick="exit()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+      </svg></button></th>
+</tr>
+</table> 
+
+    <br>
+        <div id="options12" style="display:none; margin-left: 100px">
+           <details>
+               <summary>Tabungan</summary>
+               <h2 align="center">MENU UTAMA</h2>
+               <h2 align="center">( PECAHAN RP.50.000)</h2>
+               <h2 align="center">========================================================</h2>
+               <table><tr><td><div id="detail"></div></td></tr></table> 
+               <input type="button" class="btn btn-secondary" value="Cek saldo" onclick="cek()">
+               <div id="ceksaldo"></div>
+               silahkan pilih Transaksi Anda :<br>
+            <details>
+                <summary>Setor Tunai</summary>
+                <p>Jika Anda Ingin Setor Tunai Minimal Rp.50.000</p>
+                <select name="set" id="setor" style="background-color: transparent; color: white;">
+                    <option value="50000" style="background-color: blue;">Rp.50000</option>
+                    <option value="100000" style="background-color: blue;">Rp.100000</option>
+                    <option value="150000" style="background-color: blue;">Rp.150000</option>
+                    <option value="200000" style="background-color: blue;">Rp.200000</option>
+                    <option value="300000" style="background-color: blue;">Rp.300000</option>
+                    <option value="300000" style="background-color: blue;">Rp.400000</option>
+                    <option value="500000" style="background-color: blue;">Rp.500000</option>
+                </select>
+                <input type="button" value="setor" onclick="setor()" style="background-color: transparent; color: white;">
+            </details>
+    
+            <details>
+                <summary>Tarik Tunai</summary>
+                <p>Jika Anda Ingin Tarik Tunai Minimal Rp.50.000</p>
+                <select name="tar" id="tarik" style="background-color: transparent; color: white;">
+                    <option value="50000" style="background-color: blue;">Rp.50000</option>
+                    <option value="100000" style="background-color: blue;">Rp.100000</option>
+                    <option value="150000" style="background-color: blue;">Rp.150000</option>
+                    <option value="200000" style="background-color: blue;">Rp.200000</option>
+                    <option value="300000" style="background-color: blue;">Rp.300000</option>
+                    <option value="300000" style="background-color: blue;">Rp.400000</option>
+                    <option value="500000" style="background-color: blue;">Rp.500000</option>
+                </select>      
+                <input type="button" value="tarik" onclick="tarik()" style="background-color: transparent; color: white;">
+            </details>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <details>
+                            <summary>Nabung</summary>
+                            <input type="number" name="nab" id="nabung" value="0" min="0" style="background-color: transparent; color: white;">
+                            <input type="button" value="nabung" onclick="nabung()" style="background-color: transparent; color: white;">
+                        </details>
+         </details>
+        </div>
+        <script src="bank.js"></script>
+  </body>
+</html>
